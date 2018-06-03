@@ -1,0 +1,72 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   readline.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: juhallyn <juhallyn@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/03/15 18:40:54 by juhallyn          #+#    #+#             */
+/*   Updated: 2018/03/20 13:24:53 by juhallyn         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "shell.h"
+
+char			*line_editing(int cmd_return)
+{
+	t_line	*edit_line;
+	t_std	*std;
+	char	*command;
+
+	command = NULL;
+	std = std_singleton(NULL);
+	edit_line = init_line('\0');
+	std->line = edit_line;
+	ft_putstr_fd("\n", 0);
+	print_prompt(cmd_return, PROMPT_STANDARD, \
+	std_singleton(NULL)->win.ws_col - PROMPT_SIZE);
+	command = readline(&edit_line);
+	if (command != NULL)
+		return (command);
+	return (NULL);
+}
+
+static char		*readline_process(t_line **edit_line, t_line_stat **stat)
+{
+	char			*str_key;
+	int				prompt_mode;
+	int				key;
+
+	while (1)
+	{
+		str_key = (char *)ft_memalloc(sizeof(char) * 7);
+		if (read(0, str_key, (sizeof(char) * 7)) > 0)
+		{
+			key = 0;
+			key = ft_atoi_mod(str_key);
+			// log_info("key = [%d]", ft_atoi_mod(">>"));
+			paste_mod(str_key, edit_line, *stat);
+			prompt_mode = ft_edit_line(edit_line, *stat, key);
+			if (write_prompt(prompt_mode) == PROMPT_STANDARD)
+			{
+				ft_strdel(&str_key);
+				return (std_singleton(NULL)->command_line);
+			}
+			ft_strdel(&str_key);
+		}
+		else
+			read_err_free(stat, str_key);
+	}
+	return (NULL);
+}
+
+char			*readline(t_line **edit_line)
+{
+	char			*command;
+	t_line_stat		*stat;
+
+	stat = init_line_stat();
+	command = readline_process(edit_line, &stat);
+	free(stat);
+	return (command);
+}

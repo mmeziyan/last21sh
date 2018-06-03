@@ -1,0 +1,32 @@
+(+fd_in) (>(&), >>, <, <<) (+fd_out, file)
+
+(fd_in) (>, >>) file
+(fd_in) >& fd_out
+
+# echo lol >toto | cat > test3
+echo lol > toto 
+(NULL) | cat
+cat stdin:(NULL) > test3
+
+# echo "echo salut" > tutu | sh << eof
+
+
+
+# error : ">&&" == [6][2] au lieu de [6][3][3]
+
+# 2147483649 : fd max
+2147483649 > ==  -1
+sh: -1: Bad file descriptor
+
+# echo test 20>file_test
+sh: 20: Bad file descriptor
+ 
+# echo test  >&20
+sh: 20: Bad file descriptor
+
+
+# if (fd_out == fd_in)
+	continue ;
+
+
+

@@ -1,0 +1,22 @@
+total 1424
+-rw-r--r--    1 juhallyn  2016_paris       0 Apr  6 14:39 &-
+drwxr-xr-x   21 juhallyn  2016_paris     714 Apr  6 14:58 .
+drwxr-xr-x    6 juhallyn  2016_paris     204 Apr  6 14:44 ..
+drwxr-xr-x   16 juhallyn  2016_paris     544 Apr  6 14:58 .git
+-rw-r--r--    1 juhallyn  2016_paris       8 Mar 26 18:20 .gitignore
+-rwxr-xr-x    1 juhallyn  2016_paris     159 Apr  6 14:56 21sh
+-rw-r--r--    1 juhallyn  2016_paris    2791 Apr  3 11:34 42sh_.txt
+-rw-r--r--@   1 juhallyn  2016_paris  233899 Mar 26 18:20 Chapitre 19. Redirection d'E_S (entrées_sorties).pdf
+drwxr-xr-x    5 juhallyn  2016_paris     170 Mar 29 20:20 Includes
+-rw-r--r--    1 juhallyn  2016_paris    2473 Apr  5 17:31 Makefile
+-rw-r--r--    1 juhallyn  2016_paris       9 Mar 31 03:20 auteur
+-rw-r--r--    1 juhallyn  2016_paris       0 Apr  6 14:58 bash
+-rw-r--r--    1 juhallyn  2016_paris       5 Mar 31 05:52 file
+drwxr-xr-x  116 juhallyn  2016_paris    3944 Apr  6 14:35 libft
+drwxr-xr-x   11 juhallyn  2016_paris     374 Apr  5 17:31 logger
+drwxr-xr-x    4 juhallyn  2016_paris     136 Mar 26 18:20 notes
+drwxr-xr-x   13 juhallyn  2016_paris     442 Mar 26 18:20 objs
+-rwxr-xr-x    1 juhallyn  2016_paris  323030 Apr  6 14:38 out.log
+drwxr-xr-x    7 juhallyn  2016_paris     238 Mar 31 05:54 srcs
+-rw-r--r--    1 juhallyn  2016_paris  138635 Mar 26 18:20 termcap.txt
+-rw-r--r--    1 juhallyn  2016_paris    1097 Apr  6 13:37 test

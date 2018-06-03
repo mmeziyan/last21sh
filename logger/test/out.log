@@ -1,0 +1,26 @@
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:55:39 ] (l. 26) main.c               -> fatal message[0m
+[31m[ 14:55:39 ] (l. 27) main.c               -> error message[0m
+[31m[1;33m[ 14:55:39 ] (l. 28) main.c               -> warning message[0m
+[32m[ 14:55:39 ] (l. 29) main.c               -> success message[0m
+[36m[ 14:55:39 ] (l. 30) main.c               -> info message[0m
+[0m[ 14:55:39 ] (l. 31) main.c               -> debug message[0m
+[38;5;239m[ 14:55:39 ] (l. 32) main.c               -> trace message[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mEND OF THE APPLICATION INSTANCE[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mNEW INSTANCE OF THE APPLICATION[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+
+[31m[ 14:55:58 ] (l. 26) main.c               -> fatal message[0m
+[31m[ 14:55:58 ] (l. 27) main.c               -> error message[0m
+[31m[1;33m[ 14:55:58 ] (l. 28) main.c               -> warning message[0m
+[32m[ 14:55:58 ] (l. 29) main.c               -> success message[0m
+[36m[ 14:55:58 ] (l. 30) main.c               -> info message[0m
+[0m[ 14:55:58 ] (l. 31) main.c               -> debug message[0m
+[38;5;239m[ 14:55:58 ] (l. 32) main.c               -> trace message[0m
+
+[32m>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> [0m[32mEND OF THE APPLICATION INSTANCE[0m[32m <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[0m
+

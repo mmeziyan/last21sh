@@ -1,0 +1,133 @@
+Jobs control
+
+Binary can be executed in foreground and in background
+
+Expansion
+
+Following character has been expand : ~ / 9883 / 1
+
+Alias
+
+Alias works and are stored in ~/.42sh_rc
+
+Globbing
+
+? * followed by a tabulation
+
+Completion
+
+Completion on binary and directory with tabulation
+
+Operator Tokens
+
+Redirections :
+
+">" ">>" "<" "<<" "<&" ">&" "|"
+
+logical operators :
+
+"||" "&&"
+
+command separators :
+
+";" "&"
+
+Builtins
+
+env
+unsetenv
+setenv
+alias
+history
+hash
+jobs
+foreground
+background
+cd
+
+
+------------------------------------------------------------------
+
+// Initialize the logger (level and output file).
+
+if (logger_init(D_TRACE, "out.log") != 0)
+	printf("failed to open the logger\n");
+
+	// Display log messages.
+
+			log_fatal("%s", "fatal message");
+			log_error("%s", "error message");
+			log_warn("%s", "warning message");
+			log_success("%s", "success message");
+			log_info("%s", "info message");
+			log_debug("%s", "debug message");
+			log_trace("%s", "trace message");
+
+	// Close the logger.
+
+logger_close();
+
+----------------------------------------------------------------------------
+
+
+HELLO WORLD
+
+H -> E -> L
+
+HaELLO WORLD
+
+	K : H <- a -> E
+
+H -> a -> E -> L
+
+--------------------------------------------------------------------------------
+								KEYMAP
+--------------------------------------------------------------------------------
+
+	ALT  + B || ALT + < = 		GO TO BACK WORD
+	ALT  + f || ALT + > =		GO TO NEXT WORD
+
+	CTRL + k = 					DEL -> CURSOR
+	CTRL + U =  				DEL <- CURSOR
+	CTRL + A =  				GO TO BEGIN OF LINE
+	CTRL + E =  				GO TO END OF LINE
+
+--------------------------------------------------------------------------------
+								TO DO
+--------------------------------------------------------------------------------
+
+	[ls>1]
+
+	TOKEN_INIT : TOKEN_WORD : TOKEN_REDIR_SUP : TOKEN_WORD
+				  0  -  1       2   -   2         3 - 3
+
+--------------------------------------------------------------------------------
+
+	[cat | grep]
+
+	TOKEN_INIT : TOKEN_WORD : TOKEN_PIPE : TOKEN_WORD
+
+--------------------------------------------------------------------------------
+
+	[mkdir test ; cd test ; ls -a ; ls | cat | wc -c > fifi ; cat fifi]
+
+	TOKEN_INIT : TOKEN_WORD : TOKEN_SEMICOLON : TOKEN_WORD :
+
+--------------------------------------------------------------------------------
+					LEXER_VALUE
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+					LEXER TOKEN
+--------------------------------------------------------------------------------
+
+">>"
+">"
+"|"
+"<<"
+";"
+
+--------------------------------------------------------------------------------
+					LEXER TOKEN FD
+--------------------------------------------------------------------------------
